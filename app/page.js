@@ -1,95 +1,56 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client'
+import Image from "next/image"
+import "./home.css" // optional styling
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const downloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "/Ritik kamwal.pdf";
+    link.download = "Ritik kamwal.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+  // funtion to hire page
+  const hireMe = () => {
+    window.location.href = "/hire";
+  };
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+  return (
+    <div className="profile-container">
+      {/* Left side with text */}
+      <div className="profile-info">
+        <h4>Welcome, I am</h4>
+        <h1>Full Stack Developer</h1>
+        <p><b>Let UI meets UX</b></p>
+
+        <div className="profile-actions">
+          <button onClick={downloadCV}>
+            Download CV
+            <span className="btnIcon">
+              <Image src="/download.svg" alt="Download" width={20} height={15} />
+            </span>
+          </button>
+
+          <button onClick={hireMe}>
+           Contact Me
+            <span className="btnIcon1">
+              <Image src="/Graphics_arrow.svg" alt="Arrow" width={20} height={15}/>
+            </span>
+          </button>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+
+      {/* Right side with profile picture */}
+      <div className="profile-picture">
+        <Image
+          src="/ProfilePhoto.png"
+          alt="Developer"
+          width={300}
+          height={300}
+          className="rounded-img"
+        />
+      </div>
     </div>
   );
 }

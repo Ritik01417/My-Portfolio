@@ -6,20 +6,30 @@
   color: white;
   background-color: #111;
   flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  height: 590px;
+ 
 }
 
 .profile-info {
   max-width: 600px;
+  margin-left: 3rem;
+  background: #4b4646;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(1, 255, 255, 0.913);
 }
 
 .profile-info h4 {
   font-size: 1.5rem;
-  color: #00ffff;
+  color: #ffffff;
 }
 
 .profile-info h1 {
   font-size: 3rem;
   margin: 0.5rem 0;
+  color:  #00ffff;
 }
 
 .profile-info p {
@@ -41,7 +51,10 @@
   gap: 0.5rem;
   transition: background 0.3s ease;
 }
-
+.btnIcon1{
+ filter: invert(1);
+  
+}
 .profile-actions button:hover {
   background-color: #00cccc;
 }
@@ -49,9 +62,11 @@
 .profile-picture {
   max-width: 300px;
   margin-top: 2rem;
+  margin-right: 3rem;
 }
 
 .rounded-img {
   border-radius: 50%;
   border: 3px solid #00ffff;
+  box-shadow: 0 0 20px rgba(1, 255, 255, 0.913);
 }
