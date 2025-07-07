@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from "react";
-import { sendEmail } from "@/components/sendEmail"; // adjust path based on your project structure
+import { sendEmail } from "@/components/sendEmail"; 
 import "./hire.css"; 
 
 export default function HireMe() {
