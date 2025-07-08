@@ -44,7 +44,7 @@ export default function Home() {
       {/* Right side with profile picture */}
       <div className="profile-picture">
         <Image
-          src="/ProfilePhoto.png"
+          src="/profilePhoto.png"
           alt="Developer"
           width={300}
           height={300}
