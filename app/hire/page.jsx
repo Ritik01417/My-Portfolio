@@ -37,8 +37,9 @@ export default function HireMe() {
       <AnimatePresence>
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0, scale: 0 }} className="form">
+        animate={{ opacity: 1, scale: 1 ,transition: { duration: 0.8, }}}
+        exit={{ opacity: 0, scale: 0 }} 
+        className="form">
       <div className="hire-me-container">
         <h2 className="hire-title">Hire Me</h2>
         <p className="hire-subtitle">Fill out the form and I’ll get back to you soon.</p>

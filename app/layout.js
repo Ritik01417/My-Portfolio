@@ -21,6 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <link rel="icon" href="/Logo.svg" />
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
        <Navbar />
         <main>{children}</main>
