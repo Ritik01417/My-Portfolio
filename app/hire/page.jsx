@@ -1,7 +1,8 @@
 'use client'
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { sendEmail } from "@/components/sendEmail"; 
+import { AnimatePresence, motion } from "motion/react"
 import "./hire.css"; 
 
 export default function HireMe() {
@@ -30,8 +31,14 @@ export default function HireMe() {
   };
 
   return (
+    <>
+    
     <div className="main-container">
-      <div className="form">
+      <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0 }} className="form">
       <div className="hire-me-container">
         <h2 className="hire-title">Hire Me</h2>
         <p className="hire-subtitle">Fill out the form and I’ll get back to you soon.</p>
@@ -64,7 +71,10 @@ export default function HireMe() {
           <button type="submit" className="hire-btn primary">Send Message</button>
         </form>
       </div>
+    </motion.div>
+    </AnimatePresence>
     </div>
-    </div>
+    
+    </>
   );
 }
