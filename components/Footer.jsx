@@ -6,7 +6,8 @@ export default function Footer() {
     <footer className="footer-container">
       <h2 className="footer-title">From Mokup to Markup</h2>
 
-      <div className="footer-cards">
+      <div
+            className="footer-cards">
         {/* Social Media Card */}
         <div className="footer-card">
           <h3><u>Follow on <b>Social Media</b></u></h3>

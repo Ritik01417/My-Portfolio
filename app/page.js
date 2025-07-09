@@ -1,6 +1,7 @@
 'use client'
 import Image from "next/image"
-import "./home.css" // optional styling
+import { motion } from "motion/react"
+import "./home.css" 
 
 export default function Home() {
   const downloadCV = () => {
@@ -42,7 +43,11 @@ export default function Home() {
       </div>
 
       {/* Right side with profile picture */}
-      <div className="profile-picture">
+      <motion.div
+        exit={{ rotateY: 0 }}
+        whileHover={{ rotateY: 180 }}
+        transition={{ duration: 0.7 }} 
+        className="profile-picture">
         <Image
           src="/profilePhoto.png"
           alt="Developer"
@@ -50,7 +55,7 @@ export default function Home() {
           height={300}
           className="rounded-img"
         />
-      </div>
+      </motion.div>
     </div>
   );
 }
