@@ -4,6 +4,31 @@ import { motion } from "motion/react"
 import "./home.css" 
 
 export default function Home() {
+  const containerVariant = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.4 // Delay between child animations
+    }
+  }
+};
+
+const childVariant = {
+  hidden: {
+    opacity: 0,
+    y: 50
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 10
+    }
+  }
+};
+
   const downloadCV = () => {
     const link = document.createElement("a");
     link.href = "/Ritik kamwal.pdf";
@@ -18,9 +43,15 @@ export default function Home() {
   };
 
   return (
-    <div className="profile-container">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={containerVariant}
+      exit={{ opacity: 0 }}
+    className="profile-container">
       {/* Left side with text */}
-      <div className="profile-info">
+      <motion.div variants={childVariant}
+      className="profile-info">
         <h4>Welcome, I am</h4>
         <h1>Full Stack Developer</h1>
         <p><b>Let UI meets UX</b></p>
@@ -40,10 +71,11 @@ export default function Home() {
             </span>
           </button>
         </div>
-      </div>
+      </motion.div>
 
       {/* Right side with profile picture */}
       <motion.div
+        variants={childVariant}
         exit={{ rotateY: 0 }}
         whileHover={{ rotateY: 180 }}
         transition={{ duration: 0.7 }} 
@@ -56,6 +88,6 @@ export default function Home() {
           className="rounded-img"
         />
       </motion.div>
-    </div>
+    </motion.div>
   );
 }
