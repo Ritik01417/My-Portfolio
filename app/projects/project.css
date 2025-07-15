@@ -20,10 +20,8 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   padding: 1rem;
-
- 
   scrollbar-width: none; 
-  -ms-overflow-style: none;  
+  -ms-overflow-style: none  ;  
 }
 .card-scroll-container::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
@@ -38,6 +36,7 @@
   scroll-snap-align: start;
   box-shadow: 0 0 10px #00ffffe8;
   transition: all 0.3s ease;
+  /* background-color: red; */
 }
 
 .project-card:hover {
@@ -87,4 +86,83 @@
 
 .dot.active {
   background-color: #00ffff;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .project-card {
+    min-width: 280px;
+    height: 360px;
+  }
+
+  .card-scroll-container {
+    padding-bottom: 2rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+  .project-desc {
+    margin-top: 13rem;
+    
+  }
+  
+}
+@media screen and (max-width: 767px) {
+ 
+  .project-card {
+    max-width: 240px;
+    height: 320px;
+    padding: 0.7rem;
+   
+  }
+
+  .card-scroll-container {
+    padding-bottom: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .project-desc {
+    margin-top: 10rem;
+  }
+  .slider-dots {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-scroll-container {
+    padding-bottom: 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap:2rem !important
+  }
+  .project-card{
+     max-width: 80px;
+    height: 300px;
+    padding: 0.6rem;
+    
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .go-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .project-title {
+    font-size: 1rem;
+  }
+
+  .project-desc {
+    font-size: 0.9rem;
+  }
+  .slider-dots {
+    display: none;
+  }
 }

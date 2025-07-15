@@ -4,7 +4,7 @@ import "./footer.css";
 export default function Footer() {
   return (
     <footer className="footer-container">
-      <h2 className="footer-title">From Mokup to Markup</h2>
+      <h2 className="footer-title">From Mockup to Markup</h2>
 
       <div
             className="footer-cards">

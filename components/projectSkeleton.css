@@ -62,3 +62,77 @@
     left: 100%;
   }
 }
+
+/* Tablet/iPad screens (768px–1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .skeleton-card {
+    min-width: 280px;
+    height: 360px;
+    padding: 0.8rem;
+  }
+
+  .skeleton-title {
+    width: 55%;
+    height: 18px;
+  }
+
+  .skeleton-button {
+    width: 50px;
+    height: 25px;
+  }
+
+  .skeleton-description {
+    height: 160px;
+    margin-top: 6rem;
+  }
+}
+
+/* Medium mobile devices (481px–767px) */
+@media screen and (max-width: 767px) {
+  .skeleton-card {
+    min-width: 240px;
+    height: 320px;
+    padding: 0.7rem;
+  }
+
+  .skeleton-title {
+    width: 50%;
+    height: 16px;
+  }
+
+  .skeleton-button {
+    width: 45px;
+    height: 22px;
+  }
+
+  .skeleton-description {
+    height: 140px;
+    margin-top: 5rem;
+  }
+}
+
+/* Small mobile devices (≤480px) */
+@media screen and (max-width: 480px) {
+  .skeleton-card {
+    min-width: 200px;
+    height: 300px;
+    padding: 0.6rem;
+    gap:2rem !important;
+  }
+
+  .skeleton-title {
+    width: 50%;
+    height: 14px;
+  }
+
+  .skeleton-button {
+    width: 40px;
+    height: 20px;
+  }
+
+  .skeleton-description {
+    height: 120px;
+    margin-top: 4rem;
+  }
+}
+

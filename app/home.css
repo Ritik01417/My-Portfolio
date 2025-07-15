@@ -70,3 +70,130 @@
   border: 3px solid #00ffff;
   box-shadow: 0 0 20px rgba(1, 255, 255, 0.913);
 }
+
+/* Medium Devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    height: auto;
+  }
+
+  .profile-info {
+    margin: 0;
+    width: 100%;
+    max-width: 400px;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .profile-info h1 {
+    font-size: 2rem;
+  }
+
+  .profile-info p {
+    font-size: 1rem;
+  }
+
+  .profile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .profile-actions button {
+    width: 80%;
+    justify-content: center;
+  }
+
+  .profile-picture {
+    margin: 2rem 0 0 0;
+  }
+
+  .rounded-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+/* Small Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .profile-info h4 {
+    font-size: 1.2rem;
+  }
+
+  .profile-info h1 {
+    font-size: 1.6rem;
+  }
+
+  .profile-info p {
+    font-size: 0.9rem;
+  }
+
+  .profile-actions button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .rounded-img {
+    width: 160px;
+    height: 160px;
+  }
+  .profile-actions button span {
+  display: none;
+}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 2rem;
+    height: auto;
+    gap: 2rem;
+  }
+
+  .profile-info {
+    max-width: 500px;
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .profile-info h4 {
+    font-size: 1.5rem;
+  }
+
+  .profile-info h1 {
+    font-size: 2.5rem;
+  }
+
+  .profile-info p {
+    font-size: 1.1rem;
+  }
+
+  .profile-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .profile-actions button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .profile-picture {
+    margin-top: 2rem;
+  }
+
+  .rounded-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
+}
