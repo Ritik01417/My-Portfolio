@@ -57,14 +57,14 @@ const childVariant = {
         <p><b>Let UI meets UX</b></p>
 
         <div className="profile-actions">
-          <button onClick={downloadCV}>
+          <button className="downloadBtn" onClick={downloadCV}>
             Download CV
             <span className="btnIcon">
               <Image src="/download.svg" alt="Download" width={20} height={15} />
             </span>
           </button>
 
-          <button onClick={hireMe}>
+          <button className="contactMe" onClick={hireMe}>
            Contact Me
             <span className="btnIcon1">
               <Image src="/Graphics_arrow.svg" alt="Arrow" width={20} height={15}/>

@@ -38,9 +38,9 @@
 }
 
 .profile-actions button {
-  background-color: #00ffff;
-  border: none;
-  color: black;
+  /* background-color: #00ffff; */
+  /* border: none; */
+  /* color: black; */
   padding: 0.8rem 1.2rem;
   margin-right: 1rem;
   font-weight: bold;
@@ -51,14 +51,35 @@
   gap: 0.5rem;
   transition: background 0.3s ease;
 }
-.btnIcon1{
- filter: invert(1);
+.downloadBtn{
+  background-color :#00ffff;
+  border: 2px solid cyan;
   
 }
-.profile-actions button:hover {
-  background-color: #00cccc;
-}
 
+.downloadBtn:hover {
+  background-color:#4b4646;
+  border: 2px solid cyan;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(1, 255, 255, 0.913);
+  /* color:white; */
+  /* filter: invert(1); */
+  
+}
+.contactMe{
+  background-color: #4b4646;
+  border: 2px solid cyan;
+  border-radius:20px;
+  color:white;
+
+}
+.contactMe:hover{
+ background-color: #14dada94;
+ transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(1, 255, 255, 0.913);
+ /* background-color: cyan; */
+ 
+}
 .profile-picture {
   max-width: 300px;
   margin-top: 2rem;
@@ -71,7 +92,7 @@
   box-shadow: 0 0 20px rgba(1, 255, 255, 0.913);
 }
 
-/* Medium Devices (max-width: 768px) */
+
 @media screen and (max-width: 768px) {
   .profile-container {
     flex-direction: column;
@@ -117,9 +138,11 @@
     height: 200px;
     object-fit: cover;
   }
+  .profile-actions button span {
+  display: none;
+}
 }
 
-/* Small Devices (max-width: 480px) */
 @media screen and (max-width: 480px) {
   .profile-info h4 {
     font-size: 1.2rem;
