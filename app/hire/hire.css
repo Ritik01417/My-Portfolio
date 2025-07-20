@@ -59,3 +59,59 @@
 .hire-btn.primary:hover {
   background: #00cccc;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .hire-me-container {
+    padding: 1rem;
+    width: 90%;
+    height: 65vh;
+  }
+
+  .hire-title {
+    font-size: 1.5rem;
+  }
+
+  .hire-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .hire-form input,
+  .hire-form textarea {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .hire-btn.primary {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+}
+
+@media  screen and (min-width: 1284px) and (max-width: 1440px) {
+  .hire-me-container {
+    padding: 1rem;
+    width: 95%;
+    height: auto;
+  }
+
+  .hire-title {
+    font-size: 1.2rem;
+  }
+
+  .hire-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .hire-form input,
+  .hire-form textarea {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .hire-btn.primary {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+}

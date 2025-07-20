@@ -2,13 +2,15 @@
 import Image from "next/image"
 import { motion } from "motion/react"
 import "./home.css" 
+import FloatingIcons from "@/components/Floatingicons";
+import "@/components/FloatingIcons.css";
 
 export default function Home() {
   const containerVariant = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.4 // Delay between child animations
+      staggerChildren: 0.4 
     }
   }
 };
@@ -31,7 +33,7 @@ const childVariant = {
 
   const downloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/Ritik kamwal.pdf";
+    link.href = "/Ritik kamwalCV.pdf";
     link.download = "Ritik kamwal.pdf";
     document.body.appendChild(link);
     link.click();
@@ -72,7 +74,7 @@ const childVariant = {
           </button>
         </div>
       </motion.div>
-
+      <FloatingIcons />
       {/* Right side with profile picture */}
       <motion.div
         variants={childVariant}
@@ -88,6 +90,7 @@ const childVariant = {
           className="rounded-img"
         />
       </motion.div>
+      
     </motion.div>
   );
 }
